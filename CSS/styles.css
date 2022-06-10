@@ -1,0 +1,138 @@
+/*  backgound-color : #FFF8DC
+    font- color     : darkblue
+    font Family     : Tiro Bangla , serif 
+    font- weight    : 400
+    */
+* {box-sizing: border-box;}
+:root{
+  --background1:#FFF8DC;
+  --background2:#cc9900;
+  --background3: darkblue;
+  --background4: lightgreen;
+  --background5: burlywood;
+  --color1:darkblue;
+  --color2:white;
+  --color3:#cc0000;
+  --color4:#05676e;
+  --color5:#489c79;
+  --size1:14 px;
+  --size2:30 px; 
+  --size3:24 px;
+  --size4:18 px;
+  --f-weight1:bold;
+  --f-weight2:400;
+  --family1:'Tiro Bangla', serif;
+  --family2:times new roman ;
+  --family3: arial;
+}
+
+body{background-color:var(--background1);min-width: 350px;max-width: 1200px;}
+
+body {font-family:var(--family1); font-weight:var(--f-weight2) ;font-size:var(--size1);line-height: 1.6;}
+ h1 {font-size:var(--size2);font-weight:var(--f-weight1);text-decoration:underline; text-align:center;color:var(--color1);}
+  h2 {font-size:var(--size3);font-weight:var(--f-weight1);text-decoration:underline; }
+    h3 {font-size:var(--size4);font-weight:var(--f-weight2);text-decoration:none;color:var(--color1);}
+
+     .button1,button{
+             /* overwrites browser defaults and resets the border */
+             border: 1px;
+             /* takes the font from the outer container */
+             font-family: var(--family2);
+               /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+                 background-color:var(--background2);
+                     color:var(--color2);
+                       text-decoration: none;
+                         /*adds spacing to the button  */
+                          padding: 10px;
+                           border-radius: 3px;
+                           /*  the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+                             border-bottom: 2px solid rgba( 0, 0, 0.3);transition-duration: 0.4s; transition-property: opacity;
+                             clear: both;
+                           }
+a {color :var(--color3);}
+a:visited {
+  /* visited link */
+  color:var(--color4);
+}
+
+a:active {
+  /* selected link */
+  color:var(--color5);
+}
+button:hover, button:focus,.button1:hover,.button1:focus {
+ 
+  cursor: pointer;
+  /* reduces the opacity of the button to 60% */
+  opacity: 0.60;border-radius: 50%;transition-duration: 0.4s;
+}
+
+
+
+#personal,#skill {margin-bottom: 2px;}
+
+table,td,th{text-align: center;position: relative;margin: 0 auto;}
+
+.header-page{margin: 0 auto;border:2px solid blue ;padding:0px 50px; background-color:var(--background3);clear:both;display: flex;flex-basis: auto;flex-shrink: 1;flex-grow: 1;}
+  .nav-page{text-align:center;width: auto;margin: 0 auto;}
+ 
+    .main-page{text-align: center;}
+      .footer-page{text-align: center;border: 2px solid black;background-color:var(--background5) ;clear:both;}
+      .footer-page{display: flex;flex-basis: auto;flex-shrink: 1;flex-grow: 1;flex-direction:column ;}
+         .form{text-align: center;display:inline-grid;}
+            #contact{text-align: center;text-decoration:underline;}
+            .products{text-align:center ;margin: 0 auto;}
+            .products{display: grid;grid-template-columns:auto auto auto;grid-template-rows: auto ;grid-gap:10px;}
+             .img1{border: 2px solid black;clear:both;border-radius:50%;}
+              .grid-item{background-color:var(--background4);text-align: center;border: 1px solid black;padding-top: 10PX;}
+              .social-media{text-align: center;flex-direction: row;}
+
+/* this for task 1.7 it is used for resolution between 0 px to 750 px */
+
+ @media all and (max-width:580px){
+  .products{grid-template-columns: 1fr;}
+ }
+
+ @media all and (min-width:580px) and (max-width:750px){
+  .products{grid-template-columns:1fr 1fr 1fr;}
+ }
+
+ @media all and (max-width:750px){
+  .products{grid-gap:10px;}
+   .grid-item{grid-column: auto;grid-row:auto;}
+    h1{font-size:22px;}
+   }
+
+
+  .img2 {  
+  animation: bounce 10s, flying 10s 10s linear , flyingOut 5s 10s;
+  width: 150px;
+  margin: 0 auto;
+  display: block;}
+
+    @keyframes bounce { 0% {
+      width: 0px;
+      transform: rotate(90deg); }
+      100% {
+      transform: rotate(0deg);}
+      }
+
+        @keyframes flying {0%, 100% 
+          { -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);}
+        50% {-webkit-transform: translate(10px, 0);
+            transform: translate(10px, 0);}
+          80% {-webkit-transform: translate(-5px, 0);
+            transform: translate(-5px, 0);}
+          }
+
+           @keyframes flyingOut {0% {width: 256px;transform: rotate(0deg);}
+             100% {width: 400px; transform: rotate(10deg); opacity: 0;}
+            }
+
+          
+         
+            
+            
+           
+            
+      
